@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  .header {
+    background: url("../assets/images/pic.png");
+    .nav  {
+      padding: 0 29px;
+      display: flex;
+      height: 60px;
+      align-items: center;
+      font-size: 14px;
+      line-height: 13px;
+      a {
+        color: #737373;
+        margin: 0 24px;
+        font-family: Metropolis;
+        text-decoration: none;
+      }
+      .spacer {
+        display: flex;
+        flex-grow: 1;
+      }
+    }
+  }
+}
