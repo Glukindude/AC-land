@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {ClrButtonModule} from "@clr/angular";
+import {ClarityModule} from "@clr/angular";
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import {ClrButtonModule} from "@clr/angular";
   ],
   imports: [
     BrowserModule,
-    ClrButtonModule
+    ClarityModule
   ],
   providers: [],
   bootstrap: [AppComponent]
