@@ -2,16 +2,19 @@
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
+
   .section-header {
     font-size: 34px;
     line-height: 46px;
     color: #2C2E30;
     font-weight: 500;
   }
+
   .spacer {
     display: flex;
     flex-grow: 1;
   }
+
   .custom-header {
     background-image: url("../assets/images/main-pic-full.png");
     background-size: cover;
@@ -19,6 +22,7 @@
     flex-direction: column;
     //height: 890px;
     align-items: center;
+
     .custom-nav {
       width: 100%;
       padding: 0 29px;
@@ -27,12 +31,14 @@
       align-items: center;
       font-size: 14px;
       line-height: 13px;
+
       a {
         color: #737373;
         margin: 0 24px;
         text-decoration: none;
       }
     }
+
     .header-content-wrapper {
       display: flex;
       flex-direction: column;
@@ -47,6 +53,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+
         h1 {
           font-size: 48px;
           line-height: 62px;
@@ -54,17 +61,21 @@
           color: #313131;
           margin: 0 0 26px 0;
         }
+
         span {
           font-size: 18px;
           line-height: 34px;
           margin-bottom: 40px;
         }
+
         .button-container {
           display: flex;
           align-items: center;
+
           button {
             margin-right: 48px;
           }
+
           .video-link {
             color: #FFFFFF;
             text-transform: uppercase;
@@ -73,21 +84,26 @@
       }
     }
   }
+
   .products {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .section-header {
       margin: 90px auto;
     }
+
     .product-list {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid #E7EAEE;
       width: 70%;
+
       .product-item {
         //width: 320px;
         margin-bottom: 74px;
+
         .product-header {
           display: flex;
           align-items: center;
@@ -95,48 +111,58 @@
           line-height: 24px;
           color: #2C2E30;
           font-weight: bold;
+
           img {
             margin-right: 24px;
             height: 52px;
             width: 52px;
           }
         }
+
         .highlighted-text {
           color: #2F5BEA;
         }
+
         & + .product-item {
           margin-left: 46px;
         }
       }
     }
   }
+
   .section-3 {
     display: flex;
     justify-content: center;
+
     .content-container {
       margin: 140px auto 130px auto;
       display: flex;
       justify-content: space-between;
       width: 70%;
+
       .section-3-text-info {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         flex-basis: 40%;
+
         .pre-header {
           font-size: 16px;
           line-height: 16px;
           text-transform: uppercase;
           color: #7E8085;
         }
+
         h4 {
           margin-top: 17px;
         }
+
         p {
           font-size: 16px;
           line-height: 28px;
           color: #54565A;
         }
+
         a {
           text-decoration: none;
           font-size: 18px;
@@ -144,17 +170,138 @@
           color: #2C2E30;
           border-bottom: 3px solid #2F5BEA;
           padding-bottom: 7px;
+
           .arrow-forward {
             transform: rotate(90deg);
           }
         }
       }
+
       .video {
         img {
           width: 540px;
           height: 380px;
         }
       }
+    }
+
+  }
+
+  .section-4 {
+    background-color: #3A828C;
+    display: flex;
+    justify-content: center;
+
+    .content-container {
+      color: #d2d2d2;
+      width: 70%;
+      display: flex;
+
+      .app-advert {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        margin-top: 214px;
+        align-items: flex-start;
+
+        span {
+          font-size: 15px;
+          line-height: 14px;
+          margin-bottom: 19px;
+        }
+
+        h4 {
+          color: #ffffff;
+          font-size: 34px;
+          line-height: 46px;
+          margin: 0 0 29px 0;
+        }
+
+        p {
+          color: #d2d2d2;
+          font-size: 16px;
+          line-height: 28px;
+          margin: 0 0 62px 0;
+        }
+      }
+      .smartphone {
+        margin-bottom: -120px;
+        margin-top: 60px;
+        width: 340px;
+        height: 700px;
+        border-right: 10px solid #FFFFFF;
+        border-left: 10px solid #FFFFFF;
+        border-top: 46px solid #FFFFFF;
+        border-bottom: 55px solid #FFFFFF;
+        border-radius: 40px;
+        position: relative;
+        box-shadow: 0px 7px 27px 3px rgba(186,188,188,1);
+        &::after{
+          position: absolute;
+          bottom: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+
+          content: "";
+          z-index: 1;
+          width: 100px;
+          height: 6px;
+          border-radius: 3px;
+          background: #000000;
+
+
+
+        }
+      }
+      .app-descript {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        margin-top: 214px;
+        align-items: flex-start;
+
+        .button-container {
+          display: flex;
+          margin-bottom: 55px;
+          button {
+            background: rgba(255, 255, 255, .3);
+            border-radius: 100%;
+            width: 49px;
+            height: 49px;
+            color: #FFFFFF;
+            border: none;
+            transition: .1s linear;
+            position: relative;
+            &:hover {
+              background: rgba(255, 255, 255, 1);
+              color: #2f5bea;
+            }
+            clr-icon {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+
+            }
+          }
+          .backward {
+            transform: rotate(180deg);
+            margin-right: 13px;
+
+          }
+        }
+
+        h5 {
+          line-height: 21px;
+          font-size: 21px;
+          color: #ffffff;
+          margin: 0 0 36px 0;
+        }
+        ul {
+          list-style-type: none;
+        }
+      }
+
     }
   }
 }
