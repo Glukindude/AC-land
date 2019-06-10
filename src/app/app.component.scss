@@ -331,9 +331,10 @@
     }
   }
   .section-6 {
-    padding-top: 118px;
+    padding-top: 164px;
     display: flex;
     justify-content: center;
+    padding-bottom: 118px;
     .content-container {
       width: 70%;
       display: flex;
@@ -393,6 +394,7 @@
     }
   }
   .cta {
+    padding-top: 118px;
     background-color: #BFEEF8;
     display: flex;
     flex-direction: column;
