@@ -1,7 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+//@import "fonts.scss";
+
 body {
   margin: 0;
   padding: 0;
+  background: #e5e5e5;
+}
+
+* {
   box-sizing: border-box;
-  background: #FFFFFF;
+  font-family: Metropolis, Avenir Next, Helvetica Neue, Arial, sans-serif;
+}
+a, button {
+  cursor: pointer;
 }
