@@ -79,9 +79,6 @@
       margin-top: 60px;
       display: flex;
       justify-content: center;
-      @include lg {
-        margin-top: 240px;
-      }
       img {
         max-width: 922px;
         width: 100%;
@@ -112,7 +109,6 @@
         margin-bottom: 120px;
         @include xl {
           flex-direction: row;
-          margin-bottom: 260px;
         }
 
         .product-item-wrapper {
@@ -413,10 +409,6 @@
     padding-top: 60px;
     display: flex;
     justify-content: center;
-    padding-bottom: 118px;
-    @include lg {
-      padding-top: 164px;
-    }
     .content-container {
       display: flex;
       flex-direction: column;
