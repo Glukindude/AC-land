@@ -1,0 +1,192 @@
+<section class="custom-header">
+  <video loop muted autoplay class="bg-video">
+    <source src="../assets/video/video-bg.mp4" type="video/mp4">
+  </video>
+  <div class="container">
+    <div class="header-content-wrapper">
+      <div class="header-content">
+        <h1>Упорядкування аграрного хаосу</h1>
+        <span>Управління земельним банком. Автоматизація виробничого процесу. Звіти зі стану посівів.  Завжди під рукою.</span>
+        <a class="btn btn-success btn-clock" href="#products">
+          Наші Продукти
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-diagram">
+  <div class="container">
+    <div class="diagram-wrapper">
+      <img src="../assets/images/diagram.png" alt="diagram">
+    </div>
+  </div>
+</section>
+<section class="section-products" id="products">
+  <div class="container">
+    <div class="products-wrapper">
+
+      <h4 class="section-header">Наші продукти</h4>
+      <div class="product-list">
+        <div class="product-item-wrapper">
+          <div class="product-item">
+            <div class="product-header">
+              <img src="../assets/images/icons/LM.png" alt="LM">
+              <span>Land Management</span>
+            </div>
+            <div>
+              <span class="highlighted-text">Управління земельним банком. </span>
+              База даних усіх полів і ділянок. Управління договорами оренди. Управління
+              виплатами та нарахуваннями.
+            </div>
+          </div>
+        </div>
+        <div class="product-item-wrapper">
+          <div class="product-item">
+            <div class="product-header">
+              <img src="../assets/images/icons/AM.png" alt="AM">
+              <span>Agri Management</span>
+            </div>
+            <div>
+              <span class="highlighted-text">Управління польовими роботами. </span>
+              Контроль над створенням та виконанням польових робіт а також контроль руху і
+              використання ТМЦ. GPS-моніторінг.
+            </div>
+          </div>
+        </div>
+        <div class="product-item-wrapper">
+          <div class="product-item">
+            <div class="product-header">
+              <img src="../assets/images/icons/AS.png" alt="AS">
+              <span>Agri Scouting</span>
+            </div>
+            <div>
+              <span class="highlighted-text">Огляд посівів. </span>
+              Інформація щодо стану посівів та потенційної урожайності. Автоматизація планування оглядів
+              полів. Бізнес аналітика та звіти.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-4">
+  <div class="products-header">
+    <h2>Мобільні додатки</h2>
+  </div>
+  <div class="container">
+    <div class="content-container">
+      <div class="app-advert lg-xl">
+        <span>ANDROID 4.4</span>
+        <h4>Вся інформація завжди під рукою</h4>
+        <p>Мобільні додатки налаштовуються згідно ролей користувачів. Для менеджменту та виконавців доступний різний
+          функціонал.</p>
+      </div>
+      <div class="smartphone">
+        <div class="phone-content" *ngFor="let slide of apps"
+             [style.display]="slide.name === activeSlide.name ? 'inherit' : 'none'">
+          <img src="../assets/images/slider/{{slide.image}}" [alt]="slide.image">
+        </div>
+      </div>
+      <div class="app-descript">
+        <div class="app-advert xs-lg">
+          <h4>Вся інформація завжди під рукою</h4>
+          <p>Мобільні додатки налаштовуються згідно ролей користувачів. Для менеджменту та виконавців доступний різний
+            функціонал.</p>
+        </div>
+        <div class="button-container">
+          <button class="backward" (click)="prevSlide()">
+          </button>
+          <button class="forward" (click)="nextSlide()">
+          </button>
+        </div>
+        <h5>{{activeSlide.name}}</h5>
+        <ul>
+          <li *ngFor="let point of activeSlide.description"> - {{point}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-5">
+  <div class="content-container">
+    <span class="pre-header">Веб додатки</span>
+    <h4>Єдина база даних та синхронізація із мобільними додатками</h4>
+    <div class="container">
+      <div class="app-cards-wrapper">
+        <div class="app-card">
+          <img src="../assets/images/icons/LM.png" alt="LM">
+          <h5>Land Management<br>
+            <span>Управління земельним банком</span>
+          </h5>
+
+          <article>Реєстр земельних ділянок. Управління реєстром полів . Договори оренди. Виплати та нарахування .
+            Аналітика і
+            звіти 
+          </article>
+          <a routerLink="/LandManagement">
+            Дізнатись більше
+            <img class="arrow-forward" src="../assets/images/icons/arrow-line.svg" alt="">
+          </a>
+        </div>
+        <div class="app-card">
+          <img src="../assets/images/icons/AM.png" alt="LM">
+          <h5>Agri Scouting<br>
+            <span>Управління оглядами полів</span>
+          </h5>
+
+          <article>Контроль оглядів полів. Стан посівів. Поточна погода та прогноз Погодження додаткової обробки
+            посівів. Бізнес аналітика.
+          </article>
+          <a routerLink="/AgriScouting">
+            Дізнатись більше
+            <img class="arrow-forward" src="../assets/images/icons/arrow-line.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-6">
+  <div class="container">
+    <div class="content-container">
+      <div class="content-header">
+        <span>БІльше ніж просто програми</span>
+        <h4>Ми приклали максимум зусиль, щоб робота із продуктами компанії була комфортною та зрозумілою для
+          агрономів</h4>
+      </div>
+      <div class="content-wrapper">
+        <div class="feaches-list">
+          <div class="feache-item">
+            <div class="feache-header">
+              <img src="../assets/images/icons/book-open-2.svg" alt="book">
+              <h5>Впровадження системи на місцях</h5>
+            </div>
+            <p>Ми маємо досвід у запровадженні подібних систем у найбільших аграрних корпораціях України. Окрема команда
+              буде допомагати у впровадженні системи на місцях, та консультувати при виникненні питань.
+            </p>
+          </div>
+          <div class="feache-item">
+            <div class="feache-header">
+              <img src="../assets/images/icons/phone-2.svg" alt="phone">
+              <h5>Технічна підтримка</h5>
+            </div>
+            <p>Ми несемо відповідальність за якість, тому завжди готові відповісти на складні питання та усунути помилки
+              при їх виникненні.
+            </p>
+          </div>
+          <div class="feache-item">
+            <div class="feache-header">
+              <img src="../assets/images/icons/preferences-circle.svg" alt="preferences">
+              <h5>Легке налаштування під потреби клієнта</h5>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <img src="../assets/images/screens.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>

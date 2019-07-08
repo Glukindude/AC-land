@@ -1,0 +1,56 @@
+@import "mixins.scss";
+.container {
+  width: 90%;
+  margin: 0 auto;
+  @include sm {
+    width: 500px;
+  }
+  @include md {
+    width: 626px;
+  }
+  @include lg {
+    width: 626px;
+  }
+  @include xl {
+    width: 1152px;
+  }
+}
+
+.xs-lg {
+  display: inherit;
+  @include xl {
+    display: none !important;
+  }
+}
+
+.lg-xl {
+  display: none !important;
+  @include xl {
+    display: inherit !important;
+  }
+}
+
+.xs-sm {
+  display: inherit;
+  @include md {
+    display: none;
+  }
+}
+.md-xl {
+  display: none;
+  @include md {
+    display: inherit;
+  }
+}
+
+.section-header {
+  font-size: 34px;
+  line-height: 46px;
+  color: #2C2E30;
+  font-weight: 500;
+}
+
+.spacer {
+  display: flex;
+  flex-grow: 1;
+}

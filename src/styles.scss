@@ -1,11 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import "fonts.scss";
+@import "styles/buttons.scss";
+@import "styles/shared.scss";
 
+html {
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
   background: #e5e5e5;
   min-width: 320px;
+  height: 100%;
 }
 
 * {

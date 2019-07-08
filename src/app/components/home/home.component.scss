@@ -1,0 +1,494 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/buttons.scss";
+@import "../../../styles/shared.scss";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  .svg-icon {
+    width: 15px;
+  }
+  .custom-header {
+    //background-image: url("../assets/images/main-pic-full.png");
+    //background-size: cover;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    .bg-video {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      @include min-16x9 {
+        width: 100%;
+        height: auto;
+      }
+      @include max-16x9 {
+        width: auto;
+        height: 100%;
+      }
+    }
+    .container {
+      height: 100%;
+      z-index: 2;
+    }
+    .header-content-wrapper {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      .header-content {
+        display: flex;
+        flex-direction: column;
+        max-width: 686px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+
+        h1 {
+          font-size: 36px;
+          line-height: 62px;
+          margin: 0 0 26px 0;
+          @include md {
+            font-size: 48px;
+          }
+        }
+
+        span {
+          font-size: 14px;
+          line-height: 34px;
+          margin-bottom: 40px;
+          @include md {
+            font-size: 18px;
+          }
+        }
+
+        button {
+          margin: 0;
+        }
+      }
+    }
+
+  }
+
+  .section-diagram {
+    .diagram-wrapper {
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      @include lg {
+        margin-top: 240px;
+      }
+      img {
+        max-width: 922px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .section-products {
+    .products-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .section-header {
+        font-size: 24px;
+        line-height: 46px;
+        @include md {
+          font-size: 34px;
+          margin: 90px auto;
+        }
+      }
+      .product-list {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        border-bottom: 1px solid #E7EAEE;
+        width: 100%;
+        margin-bottom: 120px;
+        @include xl {
+          flex-direction: row;
+          margin-bottom: 260px;
+        }
+
+        .product-item-wrapper {
+          display: flex;
+          &:nth-child(even) {
+            justify-content: flex-end;
+          }
+
+          .product-item {
+            margin-bottom: 24px;
+            max-width: 352px;
+
+            .product-header {
+              display: flex;
+              align-items: center;
+              font-size: 24px;
+              line-height: 24px;
+              color: #2C2E30;
+              font-weight: bold;
+
+              img {
+                margin-right: 24px;
+                height: 64px;
+                width: auto;
+              }
+            }
+
+            .highlighted-text {
+              color: #2F5BEA;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-4 {
+    background-color: #3A828C;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+    @include md {
+      padding-bottom: 0;
+    }
+    .products-header {
+      display: flex;
+      justify-content: center;
+      h2 {
+        font-size: 16px;
+        line-height: 16px;
+        color: #444444;
+        text-transform: uppercase;
+        margin: 60px 0 64px;
+        @include xl {
+          margin: 84px 0 52px;
+        }
+      }
+    }
+
+    .content-container {
+      color: #d2d2d2;
+      display: flex;
+      justify-content: center;
+      @include md {
+        justify-content: space-between;
+      }
+      .app-advert {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 260px;
+        //margin-top: 214px;
+        align-items: flex-start;
+        @include xl {
+          flex-basis: 350px;
+          margin-top: 60px;
+        }
+
+        span {
+          font-size: 15px;
+          line-height: 14px;
+          margin-bottom: 19px;
+          @include xl {
+            font-size: 16px;
+          }
+        }
+
+        h4 {
+          color: #ffffff;
+          font-size: 24px;
+          line-height: 36px;
+          margin: 0 0 29px 0;
+          @include xl {
+            font-size: 34px;
+            line-height: 46px;
+          }
+        }
+
+        p {
+          color: #d2d2d2;
+          font-size: 16px;
+          line-height: 28px;
+          margin: 0;
+          @include xl {
+            margin: 0 0 62px 0;
+          }
+        }
+      }
+      .smartphone {
+        z-index: 1;
+        background: url("../../../assets/images/mobile.png") no-repeat;
+        background-size: cover;
+        display: none;
+        @include md {
+          display: block;
+          width: 284px;
+          height: 552px;
+        }
+        @include xl {
+          display: block;
+          margin-bottom: -250px;
+          width: 378px;
+          height: 753px;
+        }
+        .phone-content {
+          z-index: 2;
+          width: 100%;
+          height: 100%;
+          padding: 40px 23px 67px 24px;
+          @include xl {
+            padding: 54px 21px 91px 32px;
+          }
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .app-descript {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 260px;
+        align-items: flex-start;
+        @include xl {
+          margin-top: 60px;
+          flex-basis: 350px;
+        }
+
+        .button-container {
+          display: flex;
+          margin-bottom: 24px;
+          @include xl {
+            margin-bottom: 55px;
+          }
+          button {
+            //background-color: rgba(255, 255, 255, .3);
+            border-radius: 100%;
+            width: 49px;
+            height: 49px;
+            color: #FFFFFF;
+            border: none;
+            transition: .1s linear;
+            position: relative;
+            background: url("../../../assets/images/icons/play.svg") center no-repeat, rgba(255, 255, 255, .3);
+            &:hover {
+              background: url("../../../assets/images/icons/play-hovered.svg") center no-repeat, rgba(255, 255, 255, 1);
+            }
+          }
+          .backward {
+            transform: rotate(180deg);
+            margin-right: 13px;
+          }
+        }
+
+        h5 {
+          line-height: 21px;
+          font-size: 21px;
+          color: #ffffff;
+          margin: 0 0 21px 0;
+          @include xl {
+            margin: 0 0 36px 0;
+          }
+        }
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          font-size: 14px;
+          line-height: 28px;
+          @include xl {
+            font-size: 16px;
+          }
+        }
+      }
+
+    }
+  }
+  .section-5 {
+    display: flex;
+    justify-content: center;
+    @include xl {
+      padding-top: 250px;
+    }
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pre-header {
+      font-size: 16px;
+      line-height: 16px;
+      color: #7E8085;
+      margin: 80px auto 17px;
+      text-transform: uppercase;
+    }
+    h4 {
+      margin: 0 auto 44px;
+      font-size: 24px;
+      line-height: 46px;
+      text-align: center;
+      color: #2C2E30;
+      width: 50%;
+      @include md {
+        font-size: 34px;
+      }
+    }
+    .app-cards-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      @include xl {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .app-card {
+        //height: 505px;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 2px 9px rgba(0, 0, 0, 0.14221);
+        border-radius: 5px;
+        padding: 60px 20px 40px;
+        margin: 13px;
+        @include sm {
+          width: 480px;
+        }
+        @include xl {
+          width: 528px;
+        }
+        & > img {
+          width: 132px;
+          height: auto;
+          margin-bottom: 30px;
+        }
+        h5 {
+          margin-top: 0;
+          font-size: 24px;
+          line-height: 34px;
+          text-align: center;
+          color: #2C2E30;
+          margin-bottom: 16px;
+          span {
+            color: #2F5BEA;
+          }
+        }
+        article {
+          font-size: 16px;
+          line-height: 28px;
+          color: #54565A;
+          margin-bottom: 40px;
+        }
+        a {
+          z-index: 1;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+          line-height: 18px;
+          color: #2C2E30;
+          border-bottom: 3px solid transparent;
+          padding-bottom: 7px;
+          transition: .2s ease;
+          .arrow-forward {
+            width: 18px;
+            transform: rotate(90deg);
+          }
+          &:hover {
+            border-bottom: 3px solid #2F5BEA;
+          }
+        }
+      }
+    }
+  }
+  .section-6 {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 118px;
+    @include lg {
+      padding-top: 164px;
+    }
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .content-header {
+        margin-top: 40px;
+        text-align: center;
+        span {
+          font-size: 16px;
+          line-height: 16px;
+          text-transform: uppercase;
+          color: #7E8085;
+        }
+        h4 {
+          margin-top: 0;
+          font-size: 24px;
+          line-height: 46px;
+          color: #2C2E30;
+          margin-bottom: 70px;
+          @include md {
+            font-size: 34px;
+          }
+        }
+      }
+      .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        & > img {
+          display: none;
+          margin-right: 24px;
+          height: 100%;
+          width: auto;
+          @include xl {
+            display: block;
+            width: 548px;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+        .feaches-list {
+          display: flex;
+          flex-direction: column;
+        }
+        .feache-item {
+          padding: 25px;
+          .feache-header {
+            display: flex;
+            align-items: center;
+            img {
+              margin-right: 24px;
+            }
+            h5 {
+              margin: 0;
+              font-size: 18px;
+              line-height: 18px;
+              color: #2C2E30;
+              @include md {
+                font-size: 24px;
+                line-height: 24px;
+              }
+            }
+          }
+          p {
+            font-size: 16px;
+            line-height: 28px;
+            color: #54565A;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

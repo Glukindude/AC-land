@@ -1,0 +1,34 @@
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  -webkit-appearance: none !important;
+  border-radius: 3px;
+  border: 1px solid #0079b8;
+  min-width: 72px;
+  max-width: 360px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  line-height: 36px;
+  font-size: 12px;
+  font-weight: 500;
+  height: 36px;
+  padding: 0 12px;
+  background-color: transparent;
+  color: #0079b8;
+  margin: 6px 12px 6px 0;
+}
+
+.btn-success {
+  border-color: #2f8400;
+  background-color: #2f8400;
+  color: #fff;
+  &:hover {
+    background-color: #266900;
+    color: #fff;
+  }
+}
