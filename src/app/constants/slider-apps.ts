@@ -18,14 +18,5 @@ export const sliderApps: SliderAppModel[] = [
       'Планування та список доступної техніки'
     ],
     image: 'agri-management.jpg'
-  },
-  {
-    name: 'Land Management',
-    description: [
-      'Створення завдань на проведення польових робіт',
-      'Створення актів виконаних робіт',
-      'Планування та список доступної техніки'
-    ],
-    image: 'land-management.jpg'
   }
 ];
