@@ -33,16 +33,6 @@
       &.logo {
         position: relative;
         padding-right: 25px;
-        &::after {
-          position: absolute;
-          content: '';
-          z-index: 100;
-          right: 0;
-          top: 17px;
-          height: 50px;
-          width: 1px;
-          background: #444444;
-        }
         @include md {
           padding-right: 40px;
           &::after {
@@ -90,7 +80,6 @@
         flex-direction: column;
         align-items: flex-end;
         h4 {
-          margin: 0 100 24px;
           font-size: 24px;
           line-height: 48px;
           @include md {
